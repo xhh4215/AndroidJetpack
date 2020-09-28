@@ -8,8 +8,18 @@
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/action_more"
-        android:icon="@mipmap/ic_launcher"
+
         android:title="更多"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_one"
+
+        android:title="更多1"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_two"
+
+        android:title="更多2"
         app:showAsAction="never" />
 
 </menu>
