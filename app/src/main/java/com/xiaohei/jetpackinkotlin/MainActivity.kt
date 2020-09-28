@@ -13,7 +13,6 @@ class MainActivity : AppCompatActivity() {
         hideStatusBar()
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
-
     }
 
 
