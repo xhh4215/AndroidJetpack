@@ -1,9 +1,11 @@
 package com.xiaohei.jetpackinkotlin
 
+import android.content.Context
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.*
+import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -13,6 +15,11 @@ class MainActivity : AppCompatActivity() {
         hideStatusBar()
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
+        btn_action_hide.setOnClickListener {
+            hideKeyBoard()
+        }
+        btn_action_show.setOnClickListener {
+        }
     }
 
 
@@ -55,5 +62,12 @@ class MainActivity : AppCompatActivity() {
             super.onOptionsItemSelected(item)
         }
 
+    }
+
+
+    fun hideKeyBoard() {
+        val inputMethodManager =
+            getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        inputMethodManager.hideSoftInputFromWindow(btn_action_hide.windowToken, 0)
     }
 }
