@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="user"
+            type="com.xiaohei.jetpackinkotlin.bean.UserViewModel" />
+
+        <import type="com.xiaohei.jetpackinkotlin.UtilsKt" />
+
+        <variable
+            name="handler"
+            type="com.xiaohei.jetpackinkotlin.MyHandlers" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--
+          方法引用
+         android:onClick="@{handler::onClickFriend}"-->
+        <TextView
+            android:id="@+id/age"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:text="@{UtilsKt.intTostring(user.age)}"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="12" />
+
+        <Button
+            android:id="@+id/add"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="加一岁"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/age" />
+
+        <Button
+            android:id="@+id/mutable"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="减一岁"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/age" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -2,20 +2,18 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.xiaohei.jetpackinkotlin">
 
-
-    <!--    android 4.0 隐藏titlebar   android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen"-->
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/start_logo_round"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/start_logo_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activitys.DataStoreActivity">
 
-
-        >
-        <activity android:name=".MainActivity">
+        </activity>
+        <activity android:name=".activitys.ViewBindingActivity" />
+        <activity android:name=".activitys.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
